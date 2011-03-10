@@ -6,6 +6,8 @@ class CreateAccounts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :accounts, :slug, :unique => true
   end
 
   def self.down
