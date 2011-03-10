@@ -1,8 +1,10 @@
-YammerLikeAuth::Application.routes.draw do
-  
+YammerLikeAuth::Application.routes.draw do  
   devise_for :users
-
-  resources :users
+  resources :users, :only => [:index, :show] do
+    # member do
+    #   get :valid
+    # end
+  end
 
   root :to => "home#index"
 

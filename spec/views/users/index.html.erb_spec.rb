@@ -2,10 +2,7 @@ require 'spec_helper'
 
 describe "users/index.html.erb" do
   before(:each) do
-    assign(:users, [
-      stub_model(User),
-      stub_model(User)
-    ])
+    assign(:users, [Factory(:user), Factory(:user), Factory(:user), Factory(:user)])
   end
 
   it "renders a list of users" do

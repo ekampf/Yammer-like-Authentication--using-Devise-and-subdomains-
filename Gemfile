@@ -23,4 +23,7 @@ gem 'omniauth'
 group :development, :test do
   gem "rspec-rails", "~> 2.4"
   gem 'webrat'
+  gem 'factory_girl'
+	gem 'factory_girl_rails'
+	gem 'faker'
 end
