@@ -58,6 +58,7 @@ GEM
       net-ssh-gateway (>= 1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
+    diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faraday (0.5.7)
@@ -147,6 +148,19 @@ GEM
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.5.0)
+    rspec-rails (2.5.0)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
+      rspec (~> 2.5.0)
     ruby-openid (2.1.8)
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
@@ -174,4 +188,5 @@ DEPENDENCIES
   mysql2
   omniauth
   rails (= 3.0.5)
+  rspec-rails (~> 2.4)
   webrat
