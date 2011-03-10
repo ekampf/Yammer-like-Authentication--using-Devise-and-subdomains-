@@ -3,6 +3,7 @@
 
 // To configure blueprint, edit the partials/_base.sass file.
 @import "partials/base";
+@import "partials/buttons";
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
@@ -15,7 +16,76 @@
 @include blueprint-scaffolding;
 
 @import "compass/utilities";
+@import "compass/css3";
 
 body {
     margin: 10px;
+    background-color: #E6E6E6;
+}
+
+#header {
+    @include container;
+    
+    color:white;
+
+    background: #4c4c4c; /* old browsers */
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #666666 0%, #1c1c1c 61%, #131313 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(0%,#666666), color-stop(61%,#1c1c1c), color-stop(100%,#131313)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* ie */
+
+    height: 45px;
+
+    a { 
+        @include unstyled-link; 
+        @include link-colors(white); 
+    }
+    
+    #header-container {
+        padding:10px;
+    
+        #nav {
+            @include float(right);
+            @include horizontal-list;
+        }
+    }
+}
+
+#content {
+    @include container;
+    
+    #signup {
+        color: white;
+        background-color: #0091C0;
+        text-align: center;
+        padding: 50px 0 70px;
+        
+        #user_email {
+            height:19px;
+        }
+
+        h1,h2,h3,h4,h5 { color: white; }
+        h2{
+            font-size: 27px;
+            font-weight: bold;
+            line-height: 1em;
+            margin: 0 0 15px;
+        }
+    }
+}
+
+#footer {
+    @include container;
+    padding-top: 10px;
+    
+    #footer-nav-wrapper {
+        @include float(right);
+        
+        #footer-nav {
+            @include horizontal-list;        
+        }
+    }
+    
+    #copyright-menu {
+        @include horizontal-list;
+    }
 }
