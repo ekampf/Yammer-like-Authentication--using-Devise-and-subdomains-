@@ -1,6 +1,9 @@
 YammerLikeAuth::Application.routes.draw do  
   devise_for :users
   resources :users, :only => [:index, :show] do
+    collection do
+      post :verify_email
+    end
     # member do
     #   get :valid
     # end
