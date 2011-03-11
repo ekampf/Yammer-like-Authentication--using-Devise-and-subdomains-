@@ -1,4 +1,43 @@
 GIT
+  remote: git://github.com/intridea/omniauth.git
+  revision: 28a4a3429f85a7b2eb8e6022af82f2bc978bf0b3
+  specs:
+    oa-basic (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      rest-client (~> 1.6.0)
+    oa-core (0.2.0.beta5)
+      rack (~> 1.1)
+    oa-enterprise (0.2.0.beta5)
+      net-ldap (~> 0.1.1)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      pyu-ruby-sasl (~> 0.0.3.1)
+      rubyntlm (~> 0.1.1)
+    oa-more (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      oa-core (= 0.2.0.beta5)
+      rest-client (~> 1.6.0)
+    oa-oauth (0.2.0.beta5)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0.beta5)
+      oauth (~> 0.4.0)
+      oauth2 (~> 0.1.1)
+    oa-openid (0.2.0.beta5)
+      oa-core (= 0.2.0.beta5)
+      rack-openid (~> 1.2.0)
+      ruby-openid-apps-discovery
+    omniauth (0.2.0.beta5)
+      oa-basic (= 0.2.0.beta5)
+      oa-core (= 0.2.0.beta5)
+      oa-enterprise (= 0.2.0.beta5)
+      oa-more (= 0.2.0.beta5)
+      oa-oauth (= 0.2.0.beta5)
+      oa-openid (= 0.2.0.beta5)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 63b72cd512b14ebe5bbf48eb80d1aba39978735e
   specs:
@@ -94,39 +133,10 @@ GEM
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.4)
-    oa-basic (0.1.6)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      rest-client (~> 1.6.0)
-    oa-core (0.1.6)
-      rack (~> 1.1)
-    oa-enterprise (0.1.6)
-      net-ldap (~> 0.1.1)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      pyu-ruby-sasl (~> 0.0.3.1)
-      rubyntlm (~> 0.1.1)
-    oa-oauth (0.1.6)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.1.6)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.1.0)
-    oa-openid (0.1.6)
-      oa-core (= 0.1.6)
-      rack-openid (~> 1.2.0)
-      ruby-openid-apps-discovery
     oauth (0.4.4)
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
       multi_json (~> 0.0.4)
-    omniauth (0.1.6)
-      oa-basic (= 0.1.6)
-      oa-core (= 0.1.6)
-      oa-enterprise (= 0.1.6)
-      oa-oauth (= 0.1.6)
-      oa-openid (= 0.1.6)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.2)
@@ -195,7 +205,7 @@ DEPENDENCIES
   faker
   friendly_id
   mysql2
-  omniauth
+  omniauth!
   rails (= 3.0.5)
   rspec-rails (~> 2.4)
   webrat

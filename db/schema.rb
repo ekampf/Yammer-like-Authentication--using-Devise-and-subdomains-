@@ -35,6 +35,11 @@ ActiveRecord::Schema.define(:version => 20110310135224) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "invitation_token",     :limit => 60
+    t.datetime "invitation_sent_at"
+    t.integer  "invitation_limit"
+    t.integer  "invited_by_id"
+    t.string   "invited_by_type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
