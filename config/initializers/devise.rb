@@ -56,6 +56,22 @@ Devise.setup do |config|
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "bca25ebdc8b412c45d6401b8e3f966068cca7a3456178c8f8b28f12ebab716be2ff73ac996b79a42d2c6bc633bb971dc8d726ed8c11cbad3a0417d0f6fadd0c8"
 
+  # ==> Configuration for :invitable
+  # The period the generated invitation token is valid, after
+  # this period, the invited resource won't be able to accept the invitation.
+  # When invite_for is 0 (the default), the invitation won't expire.
+  config.invite_for = 2.weeks
+  
+  # Number of invitations users can send.
+  # If invitation_limit is nil, users can send unlimited invitations.
+  # If invitation_limit is 0, users can't send invitations.
+  # If invitation_limit n > 0, users can send n invitations.
+  # Default: nil
+  # config.invitation_limit = 5
+  
+  # The key to be used to check existing users when sending an invitation
+  # config.invite_key = :email
+  
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
   # he will be able to access your application without confirming. Default is 0.days
@@ -183,10 +199,4 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-  
-  # ==> Configuration for :invitable
-  # The period the generated invitation token is valid, after
-  # this period, the invited resource won't be able to accept the invitation.
-  # When invite_for is 0 (the default), the invitation won't expire.
-  config.invite_for = 2.weeks
 end
