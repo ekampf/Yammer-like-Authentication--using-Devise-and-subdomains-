@@ -1449,28 +1449,47 @@ body {
 }
 /* line 56, ../../../app/stylesheets/screen.scss */
 #content #signup {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border-color: #CCCCCC;
   color: white;
   background-color: #0091C0;
   text-align: center;
   padding: 50px 0 70px;
 }
-/* line 62, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 #content #signup #user_email {
   height: 19px;
 }
-/* line 66, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 #content #signup h1, #content #signup h2, #content #signup h3, #content #signup h4, #content #signup h5 {
   color: white;
 }
-/* line 67, ../../../app/stylesheets/screen.scss */
+/* line 69, ../../../app/stylesheets/screen.scss */
 #content #signup h2 {
   font-size: 27px;
   font-weight: bold;
   line-height: 1em;
   margin: 0 0 15px;
 }
+/* line 77, ../../../app/stylesheets/screen.scss */
+#content #signup-confirm {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: #CCCCCC;
+  padding: 20px;
+}
 
-/* line 76, ../../../app/stylesheets/screen.scss */
+/* line 85, ../../../app/stylesheets/screen.scss */
 #footer {
   width: 950px;
   margin: 0 auto;
@@ -1478,12 +1497,12 @@ body {
   *zoom: 1;
   padding-top: 10px;
 }
-/* line 80, ../../../app/stylesheets/screen.scss */
+/* line 89, ../../../app/stylesheets/screen.scss */
 #footer #footer-nav-wrapper {
   display: inline;
   float: right;
 }
-/* line 83, ../../../app/stylesheets/screen.scss */
+/* line 92, ../../../app/stylesheets/screen.scss */
 #footer #footer-nav-wrapper #footer-nav {
   margin: 0;
   padding: 0;
@@ -1511,7 +1530,7 @@ body {
 #footer #footer-nav-wrapper #footer-nav li:last-child, #footer #footer-nav-wrapper #footer-nav li.last {
   padding-right: 0;
 }
-/* line 88, ../../../app/stylesheets/screen.scss */
+/* line 97, ../../../app/stylesheets/screen.scss */
 #footer #copyright-menu {
   margin: 0;
   padding: 0;

@@ -21,9 +21,16 @@ class UsersController < ApplicationController
     domain = email[email.index("@")+1..-1]
         
     if GoogleAppsDiscovery.is_google_apps?(domain)
-      redirect_to "/signup/confirm"
+      redirect_to "/users/signup/confirm"
     else
-      redirect_to "/signup/confirm_email"
+      redirect_to "/users/signup/confirm_email?email=#{email}"
     end
+  end
+  
+  def confirm_email
+    # => an invitation email will be sent to new_user@example.com
+    email = params[:email]
+    User.invite!(:email => email)
+    render :layout => "home"
   end
 end

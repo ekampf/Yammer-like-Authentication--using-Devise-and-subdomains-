@@ -54,6 +54,8 @@ body {
     @include container;
     
     #signup {
+        @include border-radius;
+        border-color: #CCCCCC;
         color: white;
         background-color: #0091C0;
         text-align: center;
@@ -70,6 +72,13 @@ body {
             line-height: 1em;
             margin: 0 0 15px;
         }
+    }
+    
+    #signup-confirm {
+      @include border-radius;
+      background-color: white;
+      border-color: #CCCCCC;
+      padding:20px;
     }
 }
 
