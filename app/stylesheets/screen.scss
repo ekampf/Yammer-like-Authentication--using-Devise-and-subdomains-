@@ -54,7 +54,7 @@ body {
     @include container;
     
     #signup {
-        @include border-radius;
+        @include border-radius(0px 0px 5px 5px);
         border-color: #CCCCCC;
         color: white;
         background-color: #0091C0;

@@ -1449,12 +1449,12 @@ body {
 }
 /* line 56, ../../../app/stylesheets/screen.scss */
 #content #signup {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -o-border-radius: 0px 0px 5px 5px;
+  -ms-border-radius: 0px 0px 5px 5px;
+  -khtml-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
   border-color: #CCCCCC;
   color: white;
   background-color: #0091C0;

@@ -4,7 +4,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def create
   #   Rails.logger.info("Users::RegistrationsController called with #{params.inspect}")
   #   
-  #   new_account_info = params[:new_account_info]
+  #   new_account_info = params[:email]
   #   
   #   # Create a new account when (before) a new user is created
   #   if new_account_info.blank? then

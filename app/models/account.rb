@@ -12,6 +12,16 @@ class Account < ActiveRecord::Base
   validates_exclusion_of :slug, :in => %w( support blog www billing help api res asset assets storage ), :message => "The name <strong>{{value}}</strong> is reserved and unavailable."
 
   before_validation :downcase_slug
+  
+  def self.find_or_create_by_slug(slug)
+    accnt = Account.find_by_slug(slug)
+    if accnt.nil? then
+      accnt = Account.create!({:name => slug, :slug => slug})
+    end
+    
+    accnt
+  end
+  
 
   protected
     def downcase_slug
