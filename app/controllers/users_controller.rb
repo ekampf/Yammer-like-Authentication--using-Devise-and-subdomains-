@@ -33,4 +33,15 @@ class UsersController < ApplicationController
     User.invite!(:email => email)
     render :layout => "home"
   end
+  
+  def valid
+    user = User.valid_token?(params)
+    if user then
+      sign_in(:user, user)
+      flash[:notice] = "You've logged in!"
+    else
+      flash[:alert] = "Could not validate login!"
+    end
+    redirect_to :root
+  end
 end

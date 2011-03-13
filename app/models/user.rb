@@ -15,4 +15,14 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :account_id, :name, :email, :password, :password_confirmation, :remember_me  
+  
+  def self.valid_token?(params)
+    Rails.logger.info("User.valid_token? called with #{params}")
+    token_user = self.where(:loginable_token => params[:id]).first
+    if token_user
+      token_user.loginable_token = nil
+      token_user.save
+    end
+    return token_user
+  end
 end

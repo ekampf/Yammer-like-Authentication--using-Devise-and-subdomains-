@@ -8,9 +8,9 @@ YammerLikeAuth::Application.routes.draw do
       post :verify_email
       get "signup/confirm_email", :to => 'users#confirm_email'
     end
-    # member do
-    #   get :valid
-    # end
+    member do
+      get :valid
+    end
   end
 
   root :to => "home#index"

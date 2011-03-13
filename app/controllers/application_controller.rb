@@ -22,4 +22,27 @@ class ApplicationController < ActionController::Base
     
     nil
   end
+  
+  protected  
+    def after_sign_in_path_for(resource_or_scope)
+      # Modify Devise's original function to redirect the user to their account's root 
+      # in case they logged in from the root domains
+      
+      logger.info { "after_sign_in_path_for" }
+      
+      scope = Devise::Mapping.find_scope!(resource_or_scope)
+      if current_account.nil? then
+        # Log out of the root domain, redirect to subdomain and login there
+        token = Devise.friendly_token # generates a random string to be used for loggin the user in again
+        current_user.loginable_token = token
+        current_user.save
+        sign_out(current_user)
+        
+        flash[:notice] = nil
+        home_path = valid_user_url(token, :account_subdomain => current_user.account.slug)
+        return home_path
+      end
+      
+      super
+    end
 end
