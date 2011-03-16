@@ -13,8 +13,10 @@ in order to let users sign-up and create accounts.
 1. User browses to main homepage (ex: http://www.local.host:3000)
 2. User types his company email and presses the Sign Up button
 3. Email Confirmation 
+
   - E-Mail is sent to the user containing an invite link to continue the process.
   - if the domain is on Google Apps the user is redirected to a screen allowing him to use his Google identity
+
 4. Account is created (if needed) and a User is created on that company. User is logged in and redirected to the account's subdomain (ex: http://mycompany.local.host:3000)
 
 ### Login
