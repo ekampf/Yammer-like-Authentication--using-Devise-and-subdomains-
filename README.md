@@ -30,13 +30,15 @@ Assumptions:
 
 # Roadmap
 
-# A note about other Devise Samples
+# See Also
 This code is inspired by the following Devise samples which I tried using before writing this code:
 - https://github.com/fortuity/rails3-subdomain-devise
 - https://github.com/salex/rails3-Devise-BCSD-Can-Invite
 
 However I have decided to write my own sample because IMHO the above are not implemented correctly, hooking into the User creation process in the model's :before_validation (which is kinda hacky) instead of deriving the Devise controllers.
 Also, as I'm using this code for a real SaaS app, my goal is to have this code thoroughly speced and tested. 
+
+For an introduction to Rails 3 and subdomains, see Ryan Bates’s screencast Subdomains in Rails 3 (a transcription is available from ASCIIcasts).
 
 # Help & Information
 For questions etc. you can follow me on Twitter at http://twitter.com/ekampf
