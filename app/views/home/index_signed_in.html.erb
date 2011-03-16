@@ -1,1 +1,7 @@
-Welcome <%= current_user.name %>!!!
+<div id="content-wrapper">
+<%= flash_messages %>
+<h2>Welcome <%= current_user.name %>!!!</h2>
+<p>
+  <p><%= link_to "View users on this account", users_path %></p>  
+</p>
+</div>

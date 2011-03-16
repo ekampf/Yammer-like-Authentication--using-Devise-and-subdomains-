@@ -1,3 +1,8 @@
+<% 
+if !is_root_domain?
+  flash[:alert] = "Sign-up not permitted from a subdomain - quit mucking with the url"
+else
+%>
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -16,3 +21,7 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+<%
+end
+%>

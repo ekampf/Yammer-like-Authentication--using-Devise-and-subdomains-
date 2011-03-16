@@ -53,6 +53,13 @@ body {
 #content {
     @include container;
     
+    #content-wrapper {
+      @include border-radius(0px 0px 5px 5px);
+      background-color:white;
+      border-color: #CCCCCC;
+      padding:20px;
+    }
+    
     #signup {
         @include border-radius(0px 0px 5px 5px);
         border-color: #CCCCCC;
