@@ -2,6 +2,8 @@
 This is a sample application tat can be used as a starting point for a SaaS business application that uses a flow similar to Yammer
 in order to let users sign-up and create accounts.
 
+Current state: _in development_ (not all flows are there)
+
 ## User Stories
 
   * Signup - Allow users to signup with their company email. A new account is created for the company if its not already in the system and 
