@@ -28,6 +28,8 @@ Assumptions:
 ### Login
 
 
+# Roadmap
+
 # A note about other Devise Samples
 This code is inspired by the following Devise samples which I tried using before writing this code:
 - https://github.com/fortuity/rails3-subdomain-devise
