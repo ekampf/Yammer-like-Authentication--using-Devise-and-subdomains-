@@ -30,6 +30,12 @@ Assumptions:
 ### Login
 
 
+# Running the Sample
+
+1. _Edit your hosts file_. The sample defaults to local.host as the main domain (http://www.local.host:3000).
+2. Verify database.yml settings
+
+
 # Roadmap
 
 # See Also
