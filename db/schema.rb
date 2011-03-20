@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110310135224) do
+ActiveRecord::Schema.define(:version => 20110320175205) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "auth_domain"
   end
 
   add_index "accounts", ["slug"], :name => "index_accounts_on_slug", :unique => true
