@@ -21,9 +21,9 @@
         <% end %>
         <li><a href="/about">About</a></li>
         <% if user_signed_in? %>
-        <li><a href="/users/sign_out">Log Out</a></li>
+        <li><%= link_to "Sign out", :destroy_user_session %></li>
         <% else %>
-        <li><a href="/users/sign_in">Log In</a></li>
+        <li><%= link_to "Sign in", :new_user_session_path %></li>
         <% end %>
       </ul>
     </div>
