@@ -19,6 +19,8 @@ class ApplicationController < ActionController::Base
       if current_account.nil? then
         redirect_to root_url(:account_subdomain => false, :alert => "Unknown account/subdomain.")
       end
+      
+      return current_account
     end
     
     nil
