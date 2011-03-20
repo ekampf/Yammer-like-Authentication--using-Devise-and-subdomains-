@@ -46,6 +46,7 @@ body {
         #nav {
             @include float(right);
             @include horizontal-list;
+            cursor: pointer;
         }
     }
 }
@@ -81,7 +82,7 @@ body {
         }
     }
     
-    #signup-confirm {
+    #sign-in, #signup-confirm {
       @include border-radius;
       background-color: white;
       border-color: #CCCCCC;
