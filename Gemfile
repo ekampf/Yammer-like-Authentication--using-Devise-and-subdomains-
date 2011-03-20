@@ -12,9 +12,11 @@ gem 'capistrano'
 
 #Extra Gems
 gem 'compass' 
-gem 'devise', :git => 'git://github.com/plataformatec/devise.git'  # We need devise 1.2 for OmniAuth support
+gem 'devise', "~> 1.2.rc" # We need devise 1.2 for OmniAuth support
 gem 'devise_invitable', :git => 'git://github.com/scambra/devise_invitable.git'
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
+gem 'oa-openid', :require => 'omniauth/openid'  # OmniAuth OepnID support for Google Apps
+
 gem 'friendly_id'
 
 # Bundle gems for the local environment. Make sure to

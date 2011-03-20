@@ -1,0 +1,6 @@
+<div id="signup-confirm">
+  <h3>Confirm your email (<%= params[:email] %>) using Google Apps</h3>
+  <p><%= link_to "sign in with google", user_omniauth_authorize_path(:google_apps, :domain => @domain) %></p>
+  <br/>
+  <br/>
+</div>

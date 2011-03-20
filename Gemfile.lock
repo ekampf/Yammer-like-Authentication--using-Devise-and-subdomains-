@@ -1,50 +1,41 @@
 GIT
   remote: git://github.com/intridea/omniauth.git
-  revision: 28a4a3429f85a7b2eb8e6022af82f2bc978bf0b3
+  revision: 7b3644fd629117f10aeab52823cbb24a8970a0d6
   specs:
-    oa-basic (0.2.0.beta5)
+    oa-basic (0.2.0)
       multi_json (~> 0.0.2)
       nokogiri (~> 1.4.2)
-      oa-core (= 0.2.0.beta5)
+      oa-core (= 0.2.0)
       rest-client (~> 1.6.0)
-    oa-core (0.2.0.beta5)
+    oa-core (0.2.0)
       rack (~> 1.1)
-    oa-enterprise (0.2.0.beta5)
+    oa-enterprise (0.2.0)
       net-ldap (~> 0.1.1)
       nokogiri (~> 1.4.2)
-      oa-core (= 0.2.0.beta5)
+      oa-core (= 0.2.0)
       pyu-ruby-sasl (~> 0.0.3.1)
       rubyntlm (~> 0.1.1)
-    oa-more (0.2.0.beta5)
+    oa-more (0.2.0)
       multi_json (~> 0.0.2)
-      oa-core (= 0.2.0.beta5)
+      oa-core (= 0.2.0)
       rest-client (~> 1.6.0)
-    oa-oauth (0.2.0.beta5)
+    oa-oauth (0.2.0)
       multi_json (~> 0.0.2)
       nokogiri (~> 1.4.2)
-      oa-core (= 0.2.0.beta5)
+      oa-core (= 0.2.0)
       oauth (~> 0.4.0)
       oauth2 (~> 0.1.1)
-    oa-openid (0.2.0.beta5)
-      oa-core (= 0.2.0.beta5)
+    oa-openid (0.2.0)
+      oa-core (= 0.2.0)
       rack-openid (~> 1.2.0)
       ruby-openid-apps-discovery
-    omniauth (0.2.0.beta5)
-      oa-basic (= 0.2.0.beta5)
-      oa-core (= 0.2.0.beta5)
-      oa-enterprise (= 0.2.0.beta5)
-      oa-more (= 0.2.0.beta5)
-      oa-oauth (= 0.2.0.beta5)
-      oa-openid (= 0.2.0.beta5)
-
-GIT
-  remote: git://github.com/plataformatec/devise.git
-  revision: 63b72cd512b14ebe5bbf48eb80d1aba39978735e
-  specs:
-    devise (1.2.rc)
-      bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
+    omniauth (0.2.0)
+      oa-basic (= 0.2.0)
+      oa-core (= 0.2.0)
+      oa-enterprise (= 0.2.0)
+      oa-more (= 0.2.0)
+      oa-oauth (= 0.2.0)
+      oa-openid (= 0.2.0)
 
 GIT
   remote: git://github.com/scambra/devise_invitable.git
@@ -89,14 +80,23 @@ GEM
     babosa (0.2.2)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    capistrano (2.5.19)
+    capistrano (2.5.20)
+      highline
       highline
       net-scp (>= 1.0.0)
+      net-scp
+      net-sftp
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
+      net-ssh
+      net-ssh-gateway
       net-ssh-gateway (>= 1.0.0)
     compass (0.10.6)
       haml (>= 3.0.4)
+    devise (1.2.rc2)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -140,7 +140,7 @@ GEM
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.2)
-    rack (1.2.1)
+    rack (1.2.2)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
     rack-openid (1.2.0)
@@ -184,7 +184,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.24)
+    tzinfo (0.3.25)
     warden (1.0.3)
       rack (>= 1.0.0)
     webrat (0.7.3)
@@ -198,13 +198,14 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   compass
-  devise!
+  devise (~> 1.2.rc)
   devise_invitable!
   factory_girl
   factory_girl_rails
   faker
   friendly_id
   mysql2
+  oa-openid
   omniauth!
   rails (= 3.0.5)
   rspec-rails (~> 2.4)

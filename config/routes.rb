@@ -1,5 +1,7 @@
 YammerLikeAuth::Application.routes.draw do  
-  devise_for :users, :controllers => {  :registrations => "users/registrations", :omniauth_callbacks => "users/omniauth_callbacks", :invitations => "users/invitations" } do
+  devise_for :users, :controllers => {  :registrations => "users/registrations", 
+                                        :invitations => "users/invitations", 
+                                        :omniauth_callbacks => "users/omniauth_callbacks" } do
     #get "/users/signup/confirm_email", :to => "devise/registrations#confirm_email"
   end
   
@@ -7,6 +9,7 @@ YammerLikeAuth::Application.routes.draw do
     collection do
       post :verify_email
       get "signup/confirm_email", :to => 'users#confirm_email'
+      get "signup/confirm", :to => 'users#confirm'
     end
     member do
       get :valid

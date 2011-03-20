@@ -21,10 +21,25 @@ class UsersController < ApplicationController
     domain = email[email.index("@")+1..-1]
         
     if GoogleAppsDiscovery.is_google_apps?(domain)
-      redirect_to "/users/signup/confirm"
+      redirect_to "/users/signup/confirm?email=#{email}"
     else
       redirect_to "/users/signup/confirm_email?email=#{email}"
     end
+  end
+  
+  def confirm
+    # => called when the user's email domain is Google Apps...
+    logger.info { "#{params.inspect}" }
+    email = params[:email]
+    
+    logger.info { "email is #{email}" }
+    
+    @domain = email[email.index("@")+1..-1]
+    @openid_url = "https://www.google.com/a/#{@domain}/o8/ud?be=o8"
+    
+    logger.info { "domain is #{@domain}" }
+    
+    render :layout => "home"
   end
   
   def confirm_email
