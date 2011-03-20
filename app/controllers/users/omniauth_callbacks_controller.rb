@@ -31,7 +31,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user = User.create!(user_info)
     end
 
-    flash[:notice] = I18n.t "devise.omniauth_callbacks.success"
+    flash[:notice] = "Success"
     sign_in_and_redirect @user, :event => :authentication
   end
 end
