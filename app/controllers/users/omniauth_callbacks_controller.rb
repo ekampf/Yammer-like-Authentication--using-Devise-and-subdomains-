@@ -18,9 +18,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to "/"
     end
     
-    slug = email[email.index("@")+1..-1]
-    slug = slug[0..slug.index(".")-1]
+    auth_domain = email[email.index("@")+1..-1]
+    slug = auth_domain[0..auth_domain.index(".")-1]
     accnt = Account.find_or_create_by_slug(slug)
+    accnt.auth_domain = auth_domain
+    accnt.save
     
     @user = accnt.users.find_by_email(email)
     if @user.nil? then
