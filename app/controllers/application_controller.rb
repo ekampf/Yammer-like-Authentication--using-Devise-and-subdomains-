@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   helper_method :current_account, :is_root_domain?
+  before_filter :current_account
   before_filter :set_mailer_url_options
   
   def is_root_domain?
