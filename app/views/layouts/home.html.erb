@@ -23,7 +23,7 @@
         <% if user_signed_in? %>
         <li><%= link_to "Sign out", :destroy_user_session %></li>
         <% else %>
-        <li><%= link_to "Sign in", :new_user_session_path %></li>
+        <li><%= link_to "Sign in", :new_user_session %></li>
         <% end %>
       </ul>
     </div>
