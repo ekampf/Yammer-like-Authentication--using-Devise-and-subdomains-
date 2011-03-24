@@ -1,7 +1,9 @@
 <div id="sign-in">
 <h2>Sign in</h2>
-
+<%= flash_messages %>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <input type="hidden" name="user[account_id]" id="user_account_id" value="<%= current_account.id %>">
+
   <p><%= f.label :email %><br />
   <%= f.email_field :email %></p>
 
