@@ -1,5 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
-  layout "splash"
+  layout "home"
   
   # GET /resource/sign_in
   def new
