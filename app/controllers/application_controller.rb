@@ -48,4 +48,30 @@ class ApplicationController < ActionController::Base
       
       super
     end
+    
+    # def sign_in_and_redirect(resource_or_scope, resource=nil)
+    #   # Modify Devise's original functionto
+    #   # => Handles case if user is visiting another subdomain and tries to sign in.
+    #   # => Handles the redirect on sign up, sending them to their account root.
+    #   scope = Devise::Mapping.find_scope!(resource_or_scope)
+    #   resource ||= resource_or_scope
+    #   sign_in(scope, resource) unless warden.user(scope) == resource
+    #   if check_account_id
+    #     redirect_to stored_location_for(scope) || after_sign_in_path_for(resource)
+    #   else
+    #     account_name = current_user.account.name
+    #     token =  Devise.friendly_token
+    #     current_user.loginable_token = token
+    #     current_user.save
+    #     sign_out(current_user)
+    #     flash[:notice] = nil
+    #     home_path = valid_user_url(token, :account => account_name)
+    #     redirect_to home_path
+    #   end
+    # end  
+    # 
+    # def check_account_id
+    #   logger.info { "check_account_id called! current_account is #{current_account}, current_user.account.id is #{current_user.account.id}" }
+    #   return current_account ? current_user.account.id == current_account.id : false
+    # end
 end
